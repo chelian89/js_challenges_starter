@@ -1,9 +1,15 @@
-(function(){
+document.getElementById('click').onclick = click;
 
-    //outputs string to the body of the document
-    document.write("hello from coin-flip.js");
-
-    //outputs the string to the browsers console
-    console.log("hello from coin-flip.js");
-
-})();
+var heads = 0;
+var tails = 0;
+function click() {  
+    x = (Math.floor(Math.random() * 2) == 0);
+    if(x){
+    	flip("heads");
+    }else{
+        flip("tails");
+    }
+};
+function flip(coin) {
+    document.getElementById("result").innerHTML = coin;
+};
